@@ -1,0 +1,261 @@
+/* Existing styles */
+body {
+    font-family: 'Quattrocento', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+    /* Light background for better readability */
+    color: #000000;
+    /* Darker text color for better contrast */
+    font-size: 16px;
+    /* Increase font size */
+    line-height: 1.6;
+    /* Improve line height for all text */
+    font-weight: 575;
+}
+
+header {
+    background-color: #2b2b2b;
+    /* Dark gray */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Header shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 140px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+header h1 {
+    font-family: 'Ovo', serif;
+    font-size: 2.2rem;
+    /* Larger font size for the header */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 0 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #f27d16;
+    text-decoration: none;
+    font-size: 1.4rem;
+    /* Increase font size for navigation links */
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 800px;
+    padding-top: 60px;
+    /* Add top padding to offset the sticky header */
+}
+
+section h2 {
+    font-size: 2rem;
+    /* Increase font size for section headings */
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+section p {
+    font-size: 1.2rem;
+    /* Increase font size for paragraphs */
+    text-align: center;
+}
+
+
+section#home,
+section#about-us,
+section#advertise-join,
+section#cost-details,
+section#contact {
+    background-color: #fff;
+    /* White background for sections */
+    padding: 1.5rem;
+    /* Increase padding for better readability */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Section shadow for depth */
+}
+
+section#home {
+    text-align: center;
+}
+
+section#about-us p,
+section#cost-details p,
+section#contact p {
+    font-size: 1.1rem;
+    /* Increase font size for paragraphs */
+}
+
+section#advertise-join .row,
+section#cost-details .cost-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.advertise-content .column,
+.cost-item {
+    flex: 1;
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: #facb91c0;
+    /* Light gray for columns */
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    /* Column shadow for depth */
+}
+
+.advertise-join .advertise-content h3 {
+    font-size: 1.5rem;
+    /* Increase font size for column headings */
+    text-justify: center;
+    text-align: center;
+
+
+}
+
+.advertise-content .column strong,
+.cost-item strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.required-info {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer {
+    background-color: #2b2b2b;
+    /* Dark gray */
+    color: #f27d16;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea,
+form button {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Added border-radius for smoother look */
+}
+
+form button {
+    background-color: #f27d16;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding-bottom: .5rem;
+}
+
+/* Media queries for smaller screens */
+@media only screen and (max-width: 760px) {
+    header {
+        flex-direction: column;
+        padding: 0.5rem;
+        /* Reduce padding for smaller screens */
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: top;
+    }
+
+    .logo {
+        margin: 0 0 .5rem 0;
+        width: 60px;
+        height: auto;
+        /* Reduce logo size for smaller screens */
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    nav ul {
+        flex-direction: initial;
+    }
+
+    nav ul li {
+        margin: 0.1rem 0;
+        padding: .4rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        color: #f27d16;
+        font-weight: 700;
+        /* Reduce font size for navigation links on smaller screens */
+    }
+
+    main {
+        padding: 1rem;
+        /* Reduce padding for smaller screens */
+    }
+}
+
+    /* Fade-in effect */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
